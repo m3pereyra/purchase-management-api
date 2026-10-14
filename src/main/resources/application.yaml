@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: purchase-management-api
+
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5433/purchase_management
+    username: purchase_user
+    password: purchase_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+server:
+  port: 8085

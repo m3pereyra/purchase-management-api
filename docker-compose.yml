@@ -1,0 +1,19 @@
+services:
+
+  postgres:
+    image: postgres:17
+    container_name: purchase-management-postgres
+
+    environment:
+      POSTGRES_DB: purchase_management
+      POSTGRES_USER: purchase_user
+      POSTGRES_PASSWORD: purchase_password
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
